@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     background-image: url("img/img.webp");
     background-repeat: no-repeat;
@@ -7,6 +10,8 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -19,6 +24,16 @@ body {
     border-bottom: 1px solid lightgray;
     position: relative;
 }
+.input-area {
+    margin-left: auto;
+    padding-bottom: 10px;
+}
+
+#task-input {
+    border: 1px solid lightgray;
+}
+
+
 
 .task-tabs div {
     padding : 1em;
@@ -28,7 +43,7 @@ body {
     height: 4px;
     background-color: pink;
     position: absolute;
-    width: 100px;
+    width: 70px;
     left:0px;
     top:50px;
     padding: 0px;
@@ -38,4 +53,34 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+}
+
+.task-done {
+    text-decoration: line-through;
+    background-color: gray;
+    
+}
+
+
+#main {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 버튼아이콘 css */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 18px; /* 아이콘 크기 */
+    color: #333; /* 색상 */
+    padding: 5px;
+}
+
+button:hover i {
+    color: #007bff; /* 버튼에 마우스 올렸을 때 색상 변경 */
 }
