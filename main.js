@@ -44,7 +44,7 @@ window.addEventListener("load", () => setUnderLine(tab[0]));
 // 탭 클릭 시 언더라인 이동 & active 클래스 추가
 tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
-        tabs.forEach((t) => t.classList.remove("active")); // ✅ 수정됨!
+        tabs.forEach((t) => t.classList.remove("active")); //  수정됨!
         e.target.classList.add("active");
         setUnderLine(e.target);
     });
@@ -90,7 +90,12 @@ function filter(event) {
 }
 // 입력창 클릭 시 초기화
 taskInput.addEventListener("focus", () => (taskInput.value = "")); 
-addButton.addEventListener("click",addTask);
+addButton.addEventListener("click", () => {
+    addTask(); // 할 일 추가 함수 호출
+    taskInput.value = ""; // 입력창 초기화
+  });
+
+
 
 // 엔터 버튼 입력 시 addTask 실행
 document.addEventListener("keydown", function (event) {
